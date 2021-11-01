@@ -9,7 +9,7 @@
   }],
   "web_accessible_resources": [
     {
-      "resources": ["index.html", "js/*"],
+      "resources": ["index.html", "componentDist/*"],
       "matches": ["<all_urls>"]
     }
   ],
