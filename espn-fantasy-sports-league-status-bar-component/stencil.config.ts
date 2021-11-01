@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'fantasy-sports-status-bar',
+  namespace: 'espn-fantasy-sports-league-status-bar-component',
   outputTargets: [
     {
       type: 'dist',

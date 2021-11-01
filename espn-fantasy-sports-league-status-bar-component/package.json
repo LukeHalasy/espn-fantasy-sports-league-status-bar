@@ -1,6 +1,6 @@
 {
-  "name": "fantasy-sports-status-bar",
-  "version": "0.0.1",
+  "name": "espn-fantasy-sports-league-status-bar-component",
+  "version": "0.0.2",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
@@ -9,7 +9,7 @@
   "types": "dist/custom-elements/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/fantasy-sports-status-bar/fantasy-sports-status-bar.esm.js",
+  "unpkg": "dist/espn-fantasy-sports-league-status-bar-component/espn-fantasy-sports-league-status-bar-component.esm.js",
   "files": [
     "dist/",
     "loader/"
