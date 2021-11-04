@@ -7,8 +7,11 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface StatusBarComponent {
-        "height": string;
-        "width": string;
+        "leagueid": string;
+        "s": string;
+        "sport": string;
+        "swid": string;
+        "year": string;
     }
 }
 declare global {
@@ -24,8 +27,11 @@ declare global {
 }
 declare namespace LocalJSX {
     interface StatusBarComponent {
-        "height"?: string;
-        "width"?: string;
+        "leagueid"?: string;
+        "s"?: string;
+        "sport"?: string;
+        "swid"?: string;
+        "year"?: string;
     }
     interface IntrinsicElements {
         "status-bar-component": StatusBarComponent;

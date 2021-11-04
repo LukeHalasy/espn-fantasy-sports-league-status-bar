@@ -1,4 +1,4 @@
-import { Component, Prop, Watch, h } from '@stencil/core';
+import { Component, Prop, State, h } from '@stencil/core';
 
 @Component({
   tag: 'status-bar-component',
@@ -7,24 +7,44 @@ import { Component, Prop, Watch, h } from '@stencil/core';
 })
 
 export class StatusBarComponent {
-  @Prop() width: string;
-  @Watch('width')
-  validateWidth(providedWidth: string) {
-    const isBlank = typeof providedWidth !== 'string' || providedWidth === '';
-    if (isBlank) { throw new Error('width: required') };
-  }
+  @State() loading: boolean = true;
 
-  @Prop() height: string;
-  @Watch('height')
-  validateHeight(providedHeight: string) {
-    const isBlank = typeof providedHeight !== 'string' || providedHeight === '';
-    if (isBlank) { throw new Error('height: required') };
+  @Prop() leagueid: string;
+  @Prop() year: string;
+  @Prop() sport: string;
+
+  componentWillLoad() {
+    console.log(this.s);
+    console.log(this.swid);
+    console.log(this.leagueid);
+    console.log(this.year);
+    console.log(this.sport);
+
+    this.loading = true;
+    let url = `https://fantasy.espn.com/apis/v3/games/${this.sport}/seasons/${this.year}/segments/0/leagues/${this.leagueid}`;
+
+
+    return fetch(url).then(response => {
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+
+      response.json().then(json => {
+        if (json.status != "success") {
+          throw new Error(response.statusText);
+        } else {
+          console.log(json.message);
+          this.loading = false;
+        }
+      })
+    }).catch(err => {
+      console.log(err);
+    })
   }
 
   render() {
     return (
-      <div style={{width: this.width, height: this.height}}>Status Bar</div>
+      <div>Status Bar</div>
     );
   }
-
 }

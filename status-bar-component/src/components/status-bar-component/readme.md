@@ -7,10 +7,13 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `height` | `height`  |             | `string` | `undefined` |
-| `width`  | `width`   |             | `string` | `undefined` |
+| Property   | Attribute  | Description | Type     | Default     |
+| ---------- | ---------- | ----------- | -------- | ----------- |
+| `leagueid` | `leagueid` |             | `string` | `undefined` |
+| `s2`       | `s-2`      |             | `string` | `undefined` |
+| `sport`    | `sport`    |             | `string` | `undefined` |
+| `swid`     | `swid`     |             | `string` | `undefined` |
+| `year`     | `year`     |             | `string` | `undefined` |
 
 
 ----------------------------------------------
