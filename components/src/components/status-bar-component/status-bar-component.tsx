@@ -3,7 +3,7 @@ import { Component, Prop, State, h } from '@stencil/core';
 @Component({
   tag: 'status-bar-component',
   styleUrl: 'status-bar-component.css',
-  scoped: true,
+  shadow: true,
 })
 
 export class StatusBarComponent {
