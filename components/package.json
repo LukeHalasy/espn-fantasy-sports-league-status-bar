@@ -22,11 +22,13 @@
     "generate": "stencil generate"
   },
   "dependencies": {
+    "@extend-chrome/storage": "^1.5.0",
     "@stencil/core": "^2.7.0",
     "copyfiles": "^2.4.1",
     "dotenv": "^10.0.0"
   },
   "devDependencies": {
+    "@types/chrome": "0.0.163",
     "@types/jest": "^26.0.24",
     "jest": "^26.6.3",
     "jest-cli": "^26.6.3",

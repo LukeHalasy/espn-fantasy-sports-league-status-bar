@@ -6,15 +6,21 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface ChromePopupComponent {
+    }
     interface StatusBarComponent {
         "leagueid": string;
-        "s": string;
         "sport": string;
-        "swid": string;
         "year": string;
     }
 }
 declare global {
+    interface HTMLChromePopupComponentElement extends Components.ChromePopupComponent, HTMLStencilElement {
+    }
+    var HTMLChromePopupComponentElement: {
+        prototype: HTMLChromePopupComponentElement;
+        new (): HTMLChromePopupComponentElement;
+    };
     interface HTMLStatusBarComponentElement extends Components.StatusBarComponent, HTMLStencilElement {
     }
     var HTMLStatusBarComponentElement: {
@@ -22,18 +28,20 @@ declare global {
         new (): HTMLStatusBarComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "chrome-popup-component": HTMLChromePopupComponentElement;
         "status-bar-component": HTMLStatusBarComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface ChromePopupComponent {
+    }
     interface StatusBarComponent {
         "leagueid"?: string;
-        "s"?: string;
         "sport"?: string;
-        "swid"?: string;
         "year"?: string;
     }
     interface IntrinsicElements {
+        "chrome-popup-component": ChromePopupComponent;
         "status-bar-component": StatusBarComponent;
     }
 }
@@ -41,6 +49,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "chrome-popup-component": LocalJSX.ChromePopupComponent & JSXBase.HTMLAttributes<HTMLChromePopupComponentElement>;
             "status-bar-component": LocalJSX.StatusBarComponent & JSXBase.HTMLAttributes<HTMLStatusBarComponentElement>;
         }
     }

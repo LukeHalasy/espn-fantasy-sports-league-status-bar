@@ -4,11 +4,11 @@
   "version": "1.0",
   "action": {
     "default_title": "Fantasy Sports Status Bar",
-    "default_popup": "popup.html"
+    "default_popup": "popup/index.html"
   },
-  "permissions": {
+  "permissions": [
     "storage"
-  },
+  ],
   "content_scripts": [{
     "matches": ["<all_urls>"],
     "js": ["content-script.js"],

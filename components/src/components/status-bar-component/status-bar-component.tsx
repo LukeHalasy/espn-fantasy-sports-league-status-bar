@@ -14,8 +14,6 @@ export class StatusBarComponent {
   @Prop() sport: string;
 
   componentWillLoad() {
-    console.log(this.s);
-    console.log(this.swid);
     console.log(this.leagueid);
     console.log(this.year);
     console.log(this.sport);
